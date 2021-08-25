@@ -27,3 +27,6 @@ Route::get('/words', [WordController::class, 'index']);
 
 // get a word by id
 Route::get('/word/{id}', [WordController::class, 'details']);
+
+// delete a word
+Route::delete('/word/{id}', [WordController::class, 'delete']);

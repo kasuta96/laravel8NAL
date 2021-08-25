@@ -73,4 +73,35 @@ class WordController extends Controller
         }
     }
 
+    // Xóa 1 từ bằng id
+    public function delete($id)
+    {
+        try {
+            // xóa từ trong DB
+            $word = Word::destroy($id);
+            // trả lại status success (xóa thành công)
+            if ($word)
+            {
+                return response()->json(
+                    [
+                        'status' => 'success'
+                    ]
+                );
+            }
+            else {
+                return response()->json(
+                    [
+                        'status' => 'notFound'
+                    ]
+                );
+            }
+        } catch (\Throwable $th) {
+            // trả lại status error nếu lỗi
+            return response()->json(
+                [
+                    'status' => 'error'
+                ]
+            );
+        }
+    }
 }
