@@ -45,4 +45,32 @@ class WordController extends Controller
         return response()->json($words);
     }
 
+    // Lấy 1 từ
+    public function details($id)
+    {
+        try {
+            // lấy 1 word từ DB bằng primary key (khóa chính)
+            $word = Word::find($id);
+            // Nếu tìm thấy từ có id như vậy
+            if ($word) {
+                return response()->json($word);
+            }
+            // Nếu không có -> trả lại status notFound
+            else {
+                return response()->json(
+                    [
+                        'status' => 'notFound'
+                    ]
+                );
+            }
+        } catch (\Throwable $th) {
+            // trả lại status error nếu lỗi
+            return response()->json(
+                [
+                    'status' => 'error'
+                ]
+            );
+        }
+    }
+
 }

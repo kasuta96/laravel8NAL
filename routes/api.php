@@ -24,3 +24,6 @@ Route::post('/word', [WordController::class, 'create']);
 
 // get list words
 Route::get('/words', [WordController::class, 'index']);
+
+// get a word by id
+Route::get('/word/{id}', [WordController::class, 'details']);
