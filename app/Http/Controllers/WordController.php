@@ -36,4 +36,13 @@ class WordController extends Controller
             );
         }
     }
+    
+    // Lấy tất cả từ
+    public function index () {
+
+        // sử dụng Model Word
+        $words = Word::All();
+        return response()->json($words);
+    }
+
 }

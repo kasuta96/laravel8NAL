@@ -21,3 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // create new word
 Route::post('/word', [WordController::class, 'create']);
+
+// get list words
+Route::get('/words', [WordController::class, 'index']);
