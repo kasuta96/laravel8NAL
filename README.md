@@ -14,7 +14,7 @@ git clone https://github.com/kasuta96/laravel8NAL.git
 ```
 Switch to the app folder
 ```
-cd laravel-realworld-example-app
+cd laravel8NAL
 ```
 Install all laravel library using composer
 ```
