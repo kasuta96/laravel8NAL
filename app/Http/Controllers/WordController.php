@@ -31,7 +31,7 @@ class WordController extends Controller
             // trả lại status error nếu lỗi
             return response()->json(
                 [
-                    'status' => 'error'
+                    'status' => $th
                 ]
             );
         }
@@ -67,7 +67,7 @@ class WordController extends Controller
             // trả lại status error nếu lỗi
             return response()->json(
                 [
-                    'status' => 'error'
+                    'status' => $th
                 ]
             );
         }
@@ -99,7 +99,7 @@ class WordController extends Controller
             // trả lại status error nếu lỗi
             return response()->json(
                 [
-                    'status' => 'error'
+                    'status' => $th
                 ]
             );
         }
